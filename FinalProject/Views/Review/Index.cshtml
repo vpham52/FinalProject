@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Review>
+
+<h2>Reviews</h2>
+<table class="table">
+    <tr>
+        <th>ReviewID</th>
+        <th>PropertyID</th>
+        <th>Property Address</th>
+        <th>Previous Price</th>
+        <th>Reviewer</th>
+        <th>Property Rating</th>
+        <th>Landlord Rating</th>
+        <th>Comment</th>
+    </tr>
+
+    @foreach (var review in @Model)
+        {
+        <tr>
+            <td>@review.reviewID</td>
+            <td>@review.propertyID</td>
+            <td>@review.propertyAddress</td>
+            <td>$@review.rentalPrice</td>
+            <td>@review.reviewer</td>
+            <td>@review.propertyRating</td>
+            <td>@review.landlordRating</td>
+            <td>@review.comment</td>
+        </tr>
+    }
+
+</table>
