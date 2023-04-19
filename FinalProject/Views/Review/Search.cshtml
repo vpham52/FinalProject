@@ -3,32 +3,31 @@
 <h2>Reviews</h2>
 
 @using (Html.BeginForm("Search", "Review", FormMethod.Get))
-    {
-        <p>
-            Find by Address: @Html.TextBox("searchString")
-            <input type="submit" value="Search"/>
+{
+    <p>
+        Find by Address: @Html.TextBox("searchString")
+        <input type="submit" value="Search" />
 
-        </p>
-    }
+    </p>
+}
 
 <table class="table">
     <tr>
-        <th>ReviewID</th>
-        <th>PropertyID</th>
-        <th>Property Address</th>        
+        <th>ReviewID</th>        
+        <th>Property Address</th>
         <th>Property Rating</th>
-        <th>Landlord Rating</th>       
+        <th>Landlord Rating</th>
     </tr>
 
     @foreach (var review in @Model)
-        {
-        <tr>           
+    {
+        <tr>
             <td><a href=/Review/ViewProperty/@review.ReviewID>@review.ReviewID</a></td>
-            <td>@review.PropAddy</td>            
+            <td>@review.PropAddy</td>
             <td>@review.PropRating</td>
             <td>@review.LandlordRating</td>
-           
+
         </tr>
-    } 
+    }
 
 </table>

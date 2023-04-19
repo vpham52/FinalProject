@@ -23,6 +23,20 @@ namespace FinalProject.Controllers
             var reviews = repo.GetAllReviews();
             return View(reviews);
         }
+
+        public IActionResult ViewProperty(int reviewID)
+        {
+            var review = repo.GetSingleReview(reviewID);
+            return View(review);
+        }
+
+        public IActionResult Search(string searchString)
+        {
+            var searchResults = repo.SearchReviews(searchString);
+            return View(searchResults); 
+        }
+
+     
     }
 }
 

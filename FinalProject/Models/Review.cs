@@ -5,16 +5,16 @@ namespace FinalProject.Models
 	{
 		public Review()
 		{
+
 		}
 
-		public int reviewID { get; set; }
-		public string propertyAddress { get; set; }
-		public int propertyID { get; set; }
-		public double rentalPrice { get; set; }
-        public string reviewer { get; set; }
-        public int propertyRating { get; set; }
-        public int landlordRating { get; set; }
-        public string comment { get; set; }
+		public int ReviewID { get; set; }
+		public string PropAddy { get; set; }	
+		public double RentalPrice { get; set; }
+        public string Reviewer { get; set; }
+        public int PropRating { get; set; }
+        public int LandlordRating { get; set; }
+        public string Comment { get; set; }
 
     }
 }
